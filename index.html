@@ -1,0 +1,576 @@
+
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HSC English 1st Paper - Theme Writing Master Note</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@1,600&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Inter', 'Hind Siliguri', sans-serif;
+            background-color: #050508;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        .glow-border {
+            box-shadow: 0 0 15px rgba(59, 130, 246, 0.15);
+            border: 1px solid rgba(59, 130, 246, 0.3);
+        }
+        .glow-text-blue {
+            text-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
+        }
+        .glow-text-gold {
+            text-shadow: 0 0 10px rgba(245, 158, 11, 0.5);
+        }
+        .neon-gold-border {
+            border: 1px solid rgba(245, 158, 11, 0.3);
+            box-shadow: 0 0 15px rgba(245, 158, 11, 0.1);
+        }
+        .signature-font {
+            font-family: 'Playfair Display', serif;
+        }
+        .glass-card {
+            background: rgba(17, 24, 39, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.3s ease;
+        }
+        
+        /* Ink-Saver (Light Mode) Styling */
+        .light-mode {
+            background-color: #f9fafb !important;
+            color: #111827 !important;
+        }
+        .light-mode .glass-card {
+            background: rgba(255, 255, 255, 0.9) !important;
+            border-color: #e5e7eb !important;
+            color: #374151 !important;
+        }
+        .light-mode h1, .light-mode h2, .light-mode h3, .light-mode h4, .light-mode strong {
+            color: #111827 !important;
+        }
+        .light-mode p, .light-mode td {
+            color: #374151 !important;
+        }
+        .light-mode .bg-black, .light-mode .bg-gray-900, .light-mode .bg-gray-950 {
+            background-color: #f3f4f6 !important;
+            border-color: #d1d5db !important;
+        }
+        .light-mode code {
+            color: #1e40af !important;
+        }
+
+        /* Print Media Queries */
+        @media print {
+            body {
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+            }
+            .no-print {
+                display: none !important;
+            }
+            .glass-card, section {
+                page-break-inside: avoid !important;
+            }
+            /* Retain high-contrast padding for printed copies */
+            body.light-mode {
+                background: #ffffff !important;
+                color: #000000 !important;
+            }
+        }
+    </style>
+</head>
+<body id="mainBody" class="text-gray-100 min-h-screen selection:bg-amber-500 selection:text-black">
+
+    <!-- Sticky Print & Settings Bar (HIDDEN IN PRINT) -->
+    <div class="no-print sticky top-0 z-50 bg-black/80 backdrop-blur-md border-b border-gray-800 px-4 py-3">
+        <div class="max-w-4xl mx-auto flex flex-wrap justify-between items-center gap-3">
+            <div class="flex items-center space-x-2">
+                <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                <span class="text-xs text-gray-300 font-medium">Interactive Dashboard Active</span>
+            </div>
+            
+            <div class="flex items-center gap-3">
+                <!-- Toggle Ink Saver Mode Button -->
+                <button onclick="toggleInkSaver()" class="flex items-center gap-1.5 px-3 py-1.5 bg-gray-800/80 hover:bg-gray-700 border border-gray-700 rounded-lg text-xs font-semibold text-amber-400 transition-all">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
+                    <span id="inkSaverText">Toggle Ink-Saver (Light)</span>
+                </button>
+
+                <!-- Print / Save to PDF Button -->
+                <button onclick="triggerPrint()" class="flex items-center gap-1.5 px-4 py-1.5 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white rounded-lg text-xs font-bold shadow-lg shadow-blue-500/10 transition-all">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 00-2 2h2m2 4h10a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"></path></svg>
+                    Print / Save as PDF
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Container -->
+    <div class="max-w-4xl mx-auto px-4 py-8 md:py-12">
+        
+        <!-- Print Warning Note (Only visible when dark mode print is active) -->
+        <div id="printTip" class="no-print bg-amber-500/10 border border-amber-500/30 text-amber-300 text-xs p-3 rounded-xl mb-6 text-center leading-relaxed">
+            💡 <strong>পিডিএফ প্রিন্ট টিপস:</strong> ডার্ক মোডে হুবহু প্রিন্ট করতে চাইলে প্রিন্ট ডায়ালগ বক্স ওপেন হওয়ার পর <strong>More Settings</strong> থেকে <strong>"Background graphics"</strong> অপশনটি চেক করুন। অথবা সাধারণ কাগজের প্রিন্টে কালির অপচয় রোধ করতে উপরে <strong>Toggle Ink-Saver</strong> বাটন ব্যবহার করুন।
+        </div>
+
+        <!-- Top Navigation / Header Badge -->
+        <div class="flex justify-between items-center mb-8 border-b border-gray-800 pb-4">
+            <span class="text-xs font-semibold uppercase tracking-widest text-amber-400 bg-amber-500/10 px-3 py-1 rounded-full neon-gold-border">
+                ⚡ Exam Booster Note
+            </span>
+            <span class="text-xs text-gray-400">Target: <strong class="text-emerald-400">100% Marks in Theme</strong></span>
+        </div>
+
+        <!-- Main Banner Header -->
+        <header class="text-center mb-12 relative overflow-hidden p-8 rounded-3xl bg-gradient-to-br from-gray-900 via-black to-slate-900 border border-gray-800">
+            <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 via-amber-500 to-emerald-500"></div>
+            <p class="text-blue-400 font-bold uppercase tracking-wider text-xs md:text-sm mb-2">HSC English 1st Paper</p>
+            <h1 class="text-3xl md:text-5xl font-extrabold text-white tracking-tight mb-4">
+                Theme Writing <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-yellow-200 glow-text-gold">Master Note</span>
+            </h1>
+            <p class="text-gray-400 max-w-xl mx-auto text-sm md:text-base leading-relaxed">
+                একটি মাত্র ইউনিক স্ট্রাকচার এবং প্রফেশনাল টেমপ্লেট ব্যবহার করে পরীক্ষার খাতায় সর্বোচ্চ নম্বর নিশ্চিত করার কমপ্লিট গাইডলাইন।
+            </p>
+        </header>
+
+        <!-- Section 1: Definition & Shortcut Formula -->
+        <section class="mb-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Definition -->
+                <div class="glass-card p-6 rounded-2xl relative overflow-hidden transition-all hover:scale-[1.01]">
+                    <div class="absolute top-0 left-0 w-1 h-full bg-blue-500"></div>
+                    <h3 class="text-blue-400 font-bold text-lg mb-3 flex items-center">
+                        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        🎯 Theme কী? (Exam Ready Definition)
+                    </h3>
+                    <p class="text-gray-300 italic mb-4 leading-relaxed text-sm md:text-base">
+                        "Theme is the central message, lesson, or moral that the writer wants to convey through a poem, story, or passage."
+                    </p>
+                    <div class="bg-gray-900/80 p-3 rounded-xl border border-gray-800 text-xs text-gray-400">
+                        <strong class="text-white">সহজ ভাষায়:</strong> কবিতা বা গল্পটি পড়ার পর নিজের অনুভূতি ও বুদ্ধি দিয়ে যে মূল শিক্ষা বা জীবনমুখী বার্তা খুঁজে পাওয়া যায়, তাকেই Theme বলে।
+                    </div>
+                </div>
+
+                <!-- Shortcut Formula -->
+                <div class="glass-card p-6 rounded-2xl relative overflow-hidden transition-all hover:scale-[1.01] flex flex-col justify-between">
+                    <div class="absolute top-0 left-0 w-1 h-full bg-amber-500"></div>
+                    <div>
+                        <h3 class="text-amber-400 font-bold text-lg mb-3 flex items-center">
+                            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+                            🔥 Shortcut Formula
+                        </h3>
+                        <div class="bg-black/60 p-4 rounded-xl border border-gray-800 text-center font-bold text-gray-200 text-sm md:text-base my-2">
+                            Theme = <span class="text-blue-400">Main Message</span> + <span class="text-emerald-400">Lesson</span> + <span class="text-amber-400">Writer's Purpose</span>
+                        </div>
+                    </div>
+                    <p class="text-xs text-gray-500 text-center mt-2">এই ৩টি উপাদান সমন্বয় করে ৪-৬ লাইনে থিমটি সমাপ্ত করতে হবে।</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Theme vs Summary -->
+        <section class="mb-10">
+            <h3 class="text-xl font-bold text-white mb-4 flex items-center">
+                <span class="bg-red-500/20 text-red-400 p-1.5 rounded-lg mr-2">VS</span>
+                Theme vs Summary (পার্থক্য বুঝে নাও)
+            </h3>
+            <div class="overflow-x-auto rounded-2xl border border-gray-800">
+                <table class="w-full text-left border-collapse bg-gray-900/30 text-sm md:text-base">
+                    <thead>
+                        <tr class="bg-gray-900 border-b border-gray-800 text-gray-300">
+                            <th class="p-4 font-semibold text-amber-400">Summary (সারসংক্ষেপ)</th>
+                            <th class="p-4 font-semibold text-blue-400">Theme (মূলভাব)</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-800">
+                        <tr class="hover:bg-gray-950/40">
+                            <td class="p-4 text-gray-400">পুরো লেখার সংক্ষিপ্ত বিবরণ বা চিত্র।</td>
+                            <td class="p-4 text-white font-medium bg-amber-500/5">গভীর অন্তর্নিহিত শিক্ষা বা বার্তা।</td>
+                        </tr>
+                        <tr class="hover:bg-gray-950/40">
+                            <td class="p-4 text-gray-400">প্রশ্ন করে: <strong class="text-gray-300">What happened?</strong> (কী ঘটেছে?)</td>
+                            <td class="p-4 text-white font-medium bg-amber-500/5">প্রশ্ন করে: <strong class="text-gray-300">What does it teach?</strong> (কী শিক্ষা দেয়?)</td>
+                        </tr>
+                        <tr class="hover:bg-gray-950/40">
+                            <td class="p-4 text-gray-400">ঘটনাকেন্দ্রিক এবং বর্ণনামূলক।</td>
+                            <td class="p-4 text-white font-medium bg-amber-500/5">ভাবকেন্দ্রিক এবং দার্শনিক দৃষ্টিভঙ্গি সম্পন্ন।</td>
+                        </tr>
+                        <tr class="hover:bg-gray-950/40">
+                            <td class="p-4 text-gray-400">আকারে তুলনামূলক বড় (১/৩ অংশ)।</td>
+                            <td class="p-4 text-white font-medium bg-amber-500/5">আকারে বেশ ছোট (<span class="text-emerald-400">৪ থেকে ৬ লাইন</span>)।</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Section 3: Theme Extraction Formula (Golden Rules) -->
+        <section class="mb-10 glass-card p-6 rounded-2xl border border-gray-800">
+            <h3 class="text-xl font-bold text-white mb-6 flex items-center">
+                <svg class="w-5 h-5 text-amber-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path></svg>
+                ⭐ Theme বের করার Golden Formula
+            </h3>
+            <p class="text-xs text-gray-400 mb-4 bg-gray-900 p-3 rounded-lg border border-gray-800">যেকোনো কবিতা বা প্যাসেজ পড়ার পর নিজেকে নিচের ৩টি প্রশ্ন জিজ্ঞাসা করো:</p>
+            
+            <div class="space-y-4">
+                <div class="flex items-start bg-black/40 p-4 rounded-xl border border-gray-800/80">
+                    <span class="w-7 h-7 flex items-center justify-center bg-blue-500/10 text-blue-400 rounded-full font-bold text-sm shrink-0 mr-3 mt-0.5">১</span>
+                    <div>
+                        <h4 class="text-white font-semibold text-sm">What is the poem/story about?</h4>
+                        <p class="text-xs text-gray-400">কবিতা বা গল্পটি আসলে মূল কোন বিষয়টি বা বস্তুটি নিয়ে রচিত?</p>
+                    </div>
+                </div>
+                <div class="flex items-start bg-black/40 p-4 rounded-xl border border-gray-800/80">
+                    <span class="w-7 h-7 flex items-center justify-center bg-emerald-500/10 text-emerald-400 rounded-full font-bold text-sm shrink-0 mr-3 mt-0.5">২</span>
+                    <div>
+                        <h4 class="text-white font-semibold text-sm">What message does the writer give?</h4>
+                        <p class="text-xs text-gray-400">এই সৃষ্টির অন্তরালে কবি বা লেখক আমাদের মনের গভীরে কোন বার্তাটি পৌঁছাতে চেয়েছেন?</p>
+                    </div>
+                </div>
+                <div class="flex items-start bg-black/40 p-4 rounded-xl border border-gray-800/80">
+                    <span class="w-7 h-7 flex items-center justify-center bg-amber-500/10 text-amber-400 rounded-full font-bold text-sm shrink-0 mr-3 mt-0.5">৩</span>
+                    <div>
+                        <h4 class="text-white font-semibold text-sm">What lesson do we learn?</h4>
+                        <p class="text-xs text-gray-400">বাস্তব জীবনের চলার পথে এই কবিতা থেকে আমরা কী নৈতিক বা জীবনমুখী শিক্ষা লাভ করলাম?</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- NEW HIGHLIGHTED SECTION: Exam-Ready Analysis for "The Lamb" -->
+        <section class="mb-10 bg-gradient-to-br from-indigo-950/40 via-black to-slate-900 p-6 md:p-8 rounded-3xl border-2 border-blue-500/40 relative">
+            <span class="absolute -top-3 left-6 bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-extrabold text-xs px-3 py-1 rounded-full uppercase tracking-wider shadow">
+                🎯 Super Example Analysis
+            </span>
+            <div class="mt-2 flex items-center justify-between mb-4">
+                <h3 class="text-lg md:text-xl font-bold text-white">Poem: "The Lamb" (Little Lamb, who made thee)</h3>
+                <span class="text-xs font-mono text-blue-400">William Blake</span>
+            </div>
+            
+            <div class="space-y-4 mb-6">
+                <div class="p-3 bg-black/50 rounded-xl border border-gray-800 flex flex-wrap gap-2 text-xs md:text-sm">
+                    <span class="text-gray-400">Step 1 (What is it about?):</span>
+                    <strong class="text-amber-400 font-normal">Divine creation, purity, and gentleness of life.</strong>
+                </div>
+                <div class="p-3 bg-black/50 rounded-xl border border-gray-800 flex flex-wrap gap-2 text-xs md:text-sm">
+                    <span class="text-gray-400">Step 2 (What is the message?):</span>
+                    <strong class="text-amber-400 font-normal">Both the little lamb and the child represent the pure creation of a loving God, who is also meek and mild.</strong>
+                </div>
+                <div class="p-3 bg-black/50 rounded-xl border border-gray-800 flex flex-wrap gap-2 text-xs md:text-sm">
+                    <span class="text-gray-400">Step 3 (What is the lesson?):</span>
+                    <strong class="text-amber-400 font-normal">We must recognize the gentle presence of the Creator in all living beings and live in harmony and love.</strong>
+                </div>
+            </div>
+
+            <div class="bg-blue-950/20 p-5 rounded-2xl border border-blue-500/20">
+                <p class="text-xs text-blue-400 font-bold uppercase tracking-wider mb-2">💡 Exam-Ready Theme (Ready to copy in Exam Hall)</p>
+                <p class="font-serif italic text-gray-200 text-sm md:text-base leading-relaxed">
+                    "The central theme of the poem is the divine creation, innocence, and gentleness of life. The poet emphasizes that both the little lamb and the child are creations of a loving God, who Himself is meek and mild. It teaches us to cherish the purity, peace, and innocence in nature and human beings. Therefore, we should express our deep gratitude and love towards the Creator, who binds all living things with His divine affection."
+                </p>
+            </div>
+        </section>
+
+        <!-- Section 4: Theme Writing Structure -->
+        <section class="mb-10">
+            <h3 class="text-xl font-bold text-white mb-6 flex items-center">
+                <svg class="w-5 h-5 text-emerald-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                📝 Theme Writing Structure (Exam Template)
+            </h3>
+            
+            <div class="space-y-6">
+                <!-- Step 1 -->
+                <div class="glass-card p-5 rounded-2xl border border-gray-800 relative">
+                    <span class="absolute -top-3 left-6 bg-blue-500 text-black font-extrabold text-xs px-3 py-1 rounded-full uppercase tracking-wider">Step 1: Introduction</span>
+                    <p class="text-xs text-gray-400 mt-2 mb-3">কবিতাটির মূল বিষয়বস্তু এক লাইনে উপস্থাপন করুন।</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
+                        <div class="p-3 bg-black/40 rounded-lg border border-gray-800/50 hover:border-blue-500/30 transition-colors">
+                            <code class="text-blue-400 font-mono">The central theme of the poem is...</code>
+                        </div>
+                        <div class="p-3 bg-black/40 rounded-lg border border-gray-800/50 hover:border-blue-500/30 transition-colors">
+                            <code class="text-blue-400 font-mono">The poem focuses on the concept of...</code>
+                        </div>
+                        <div class="p-3 bg-black/40 rounded-lg border border-gray-800/50 hover:border-blue-500/30 transition-colors">
+                            <code class="text-blue-400 font-mono">The poem highlights the necessity of...</code>
+                        </div>
+                        <div class="p-3 bg-black/40 rounded-lg border border-gray-800/50 hover:border-blue-500/30 transition-colors">
+                            <code class="text-blue-400 font-mono">The poem beautifully emphasizes...</code>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="glass-card p-5 rounded-2xl border border-gray-800 relative">
+                    <span class="absolute -top-3 left-6 bg-emerald-500 text-black font-extrabold text-xs px-3 py-1 rounded-full uppercase tracking-wider">Step 2: Core Idea Explanation</span>
+                    <p class="text-xs text-gray-400 mt-2 mb-3">২-৩ লাইনে ব্যাখ্যা করুন কবি কী বিশেষ বিষয় নিয়ে ভাবছেন বা তাঁর প্রকৃত উদ্দেশ্য কী।</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
+                        <div class="p-3 bg-black/40 rounded-lg border border-gray-800/50 hover:border-emerald-500/30 transition-colors">
+                            <code class="text-emerald-400 font-mono">It explicitly shows that...</code>
+                        </div>
+                        <div class="p-3 bg-black/40 rounded-lg border border-gray-800/50 hover:border-emerald-500/30 transition-colors">
+                            <code class="text-emerald-400 font-mono">The poet wants to express that...</code>
+                        </div>
+                        <div class="p-3 bg-black/40 rounded-lg border border-gray-800/50 hover:border-emerald-500/30 transition-colors">
+                            <code class="text-emerald-400 font-mono">The poem teaches us a valuable lesson...</code>
+                        </div>
+                        <div class="p-3 bg-black/40 rounded-lg border border-gray-800/50 hover:border-emerald-500/30 transition-colors">
+                            <code class="text-emerald-400 font-mono">The poem gently reminds us of...</code>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="glass-card p-5 rounded-2xl border border-gray-800 relative">
+                    <span class="absolute -top-3 left-6 bg-amber-500 text-black font-extrabold text-xs px-3 py-1 rounded-full uppercase tracking-wider">Step 3: Strong Conclusion</span>
+                    <p class="text-xs text-gray-400 mt-2 mb-3">শেষের ১-২ লাইনে মানুষের জন্য কী ইতিবাচক শিক্ষা রয়েছে তা উল্লেখ করুন।</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
+                        <div class="p-3 bg-black/40 rounded-lg border border-gray-800/50 hover:border-amber-500/30 transition-colors">
+                            <code class="text-amber-400 font-mono">Therefore, the poem encourages us to...</code>
+                        </div>
+                        <div class="p-3 bg-black/40 rounded-lg border border-gray-800/50 hover:border-amber-500/30 transition-colors">
+                            <code class="text-amber-400 font-mono">Finally, we learn that...</code>
+                        </div>
+                        <div class="p-3 bg-black/40 rounded-lg border border-gray-800/50 hover:border-amber-500/30 transition-colors">
+                            <code class="text-amber-400 font-mono">Thus, everyone should strive to...</code>
+                        </div>
+                        <div class="p-3 bg-black/40 rounded-lg border border-gray-800/50 hover:border-amber-500/30 transition-colors">
+                            <code class="text-amber-400 font-mono">Thus, the message leads us to...</code>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: Universal Theme Template -->
+        <section class="mb-10 bg-gradient-to-br from-[#111827] via-black to-[#111827] p-6 md:p-8 rounded-3xl border-2 border-amber-500/40 relative">
+            <div class="absolute -top-3 right-8 bg-amber-500 text-black font-black text-xs px-3 py-1 rounded-full uppercase tracking-widest shadow-lg shadow-amber-500/25">
+                🏆 Topper's Secret Template
+            </div>
+            <h3 class="text-xl font-bold text-amber-400 mb-2 flex items-center">
+                <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path></svg>
+                Universal Theme Template
+            </h3>
+            <p class="text-xs text-gray-400 mb-6">যে কোনো কবিতায় অল্প কিছু তথ্য ইনপুট করে সহজেই একটি স্ট্যান্ডার্ড থিম তৈরি করতে পারবে:</p>
+            
+            <div class="bg-black/80 p-6 rounded-2xl border border-gray-800 leading-relaxed font-mono text-sm md:text-base text-gray-300">
+                The central theme of the poem is <span class="bg-amber-500/10 text-amber-300 px-2 py-0.5 rounded border border-amber-500/30 font-sans font-semibold">[ write the central topic ]</span>. 
+                The poet emphasizes that <span class="bg-blue-500/10 text-blue-300 px-2 py-0.5 rounded border border-blue-500/30 font-sans font-semibold">[ write what the poet focuses on ]</span>. 
+                It teaches us that <span class="bg-emerald-500/10 text-emerald-300 px-2 py-0.5 rounded border border-emerald-500/30 font-sans font-semibold">[ write the main lesson ]</span>. 
+                Therefore, we should <span class="bg-amber-500/10 text-amber-300 px-2 py-0.5 rounded border border-amber-500/30 font-sans font-semibold">[ write what we ought to do in life ]</span>. 
+                This message inspires us to become better human beings and makes our life more meaningful.
+            </div>
+        </section>
+
+        <!-- Section 6: Vocabulary Bank -->
+        <section class="mb-10">
+            <h3 class="text-xl font-bold text-white mb-6 flex items-center">
+                <svg class="w-5 h-5 text-indigo-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.754 18 18.168 18.477 16.5 18.477 14.75 18.477 13.168 18 12 19.253"></path></svg>
+                Vocabulary Bank (Marks Booster Words)
+            </h3>
+            <p class="text-xs text-gray-400 mb-4">এই বিশেষ শব্দগুলো ব্যবহারে শিক্ষকরা বুঝতে পারবেন তোমার লেখার মান অত্যন্ত উঁচু মানের।</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <!-- Verbs -->
+                <div class="glass-card p-4 rounded-xl border border-gray-800">
+                    <h4 class="text-blue-400 font-semibold text-sm mb-3 border-b border-gray-800 pb-1 flex justify-between">
+                        <span>Action Verbs</span>
+                        <span class="text-xs text-gray-500">ক্রিয়াপদ</span>
+                    </h4>
+                    <ul class="space-y-1.5 text-xs text-gray-300">
+                        <li><strong class="text-white font-mono">emphasizes</strong> - জোর দেয়</li>
+                        <li><strong class="text-white font-mono">highlights</strong> - আলোকপাত করে</li>
+                        <li><strong class="text-white font-mono">focuses on</strong> - কেন্দ্র করে</li>
+                        <li><strong class="text-white font-mono">encourages</strong> - উৎসাহিত করে</li>
+                        <li><strong class="text-white font-mono">reminds</strong> - স্মরণ করিয়ে দেয়</li>
+                    </ul>
+                </div>
+                <!-- Nouns -->
+                <div class="glass-card p-4 rounded-xl border border-gray-800">
+                    <h4 class="text-emerald-400 font-semibold text-sm mb-3 border-b border-gray-800 pb-1 flex justify-between">
+                        <span>Value Nouns</span>
+                        <span class="text-xs text-gray-500">বিশেষ্য</span>
+                    </h4>
+                    <ul class="space-y-1.5 text-xs text-gray-300">
+                        <li><strong class="text-white font-mono">humanity</strong> - মানবতা</li>
+                        <li><strong class="text-white font-mono">courage</strong> - সাহস</li>
+                        <li><strong class="text-white font-mono">optimism</strong> - আশাবাদ</li>
+                        <li><strong class="text-white font-mono">coexistence</strong> - সহাবস্থান</li>
+                        <li><strong class="text-white font-mono">perseverance</strong> - অধ্যবসায়</li>
+                    </ul>
+                </div>
+                <!-- Connectors -->
+                <div class="glass-card p-4 rounded-xl border border-gray-800">
+                    <h4 class="text-amber-400 font-semibold text-sm mb-3 border-b border-gray-800 pb-1 flex justify-between">
+                        <span>Smart Linkers</span>
+                        <span class="text-xs text-gray-500">সংযোজক</span>
+                    </h4>
+                    <ul class="space-y-1.5 text-xs text-gray-300">
+                        <li><strong class="text-white font-mono">Therefore</strong> - অতএব</li>
+                        <li><strong class="text-white font-mono">In fact</strong> - প্রকৃতপক্ষে</li>
+                        <li><strong class="text-white font-mono">Consequently</strong> - ফলস্বরূপ</li>
+                        <li><strong class="text-white font-mono">Ultimately</strong> - পরিশেষে</li>
+                        <li><strong class="text-white font-mono">Hence</strong> - সেই কারণে</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 7: Live Practice & Theme Builder -->
+        <section class="mb-10 bg-[#090d16] p-6 rounded-3xl border border-blue-500/20">
+            <h3 class="text-xl font-bold text-white mb-2 flex items-center">
+                <span class="p-1 bg-blue-500/20 rounded-md text-blue-400 mr-2">⚡</span>
+                Interactive Theme Generator & Practice Tool
+            </h3>
+            <p class="text-xs text-gray-400 mb-6">পরীক্ষার হলের আত্মবিশ্বাস বাড়াতে নিচের ফর্মটি পূরণ করো এবং তোমার স্বয়ংক্রিয় প্রফেশনাল থিম জেনারেট করে নাও!</p>
+            
+            <div class="space-y-4">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-xs text-gray-400 mb-1">Poem/Topic name (e.g., The Lamb, Dreams)</label>
+                        <input id="topicInput" type="text" placeholder="The Lamb" class="w-full bg-black border border-gray-800 rounded-lg p-2.5 text-sm text-white focus:outline-none focus:border-amber-400">
+                    </div>
+                    <div>
+                        <label class="block text-xs text-gray-400 mb-1">What does it represent/provide?</label>
+                        <input id="provideInput" type="text" placeholder="divine creation, purity and innocence of life" class="w-full bg-black border border-gray-800 rounded-lg p-2.5 text-sm text-white focus:outline-none focus:border-amber-400">
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-xs text-gray-400 mb-1">What is the core connection? (e.g., God created both)</label>
+                        <input id="withoutInput" type="text" placeholder="the little lamb, the child, and their God are deeply connected" class="w-full bg-black border border-gray-800 rounded-lg p-2.5 text-sm text-white focus:outline-none focus:border-amber-400">
+                    </div>
+                    <div>
+                        <label class="block text-xs text-gray-400 mb-1">What should we do? (e.g., love and praise Him)</label>
+                        <input id="doInput" type="text" placeholder="love, appreciate, and cherish all creations of the Lord" class="w-full bg-black border border-gray-800 rounded-lg p-2.5 text-sm text-white focus:outline-none focus:border-amber-400">
+                    </div>
+                </div>
+                
+                <div class="text-center pt-2">
+                    <button onclick="generateTheme()" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white font-bold text-xs md:text-sm px-6 py-2.5 rounded-xl transition-all shadow-lg shadow-blue-500/10">
+                        Generate Theme Now
+                    </button>
+                </div>
+
+                <div id="outputArea" class="hidden mt-6 bg-black p-5 rounded-2xl border border-amber-500/20 relative">
+                    <span class="absolute top-3 right-4 text-[10px] text-amber-400 font-bold tracking-widest uppercase">Result</span>
+                    <h4 class="text-sm font-semibold text-gray-400 mb-2">Your Exam-Ready Theme:</h4>
+                    <p id="generatedThemeText" class="text-sm md:text-base text-gray-100 font-serif leading-relaxed italic bg-gray-900/40 p-4 rounded-xl border border-gray-800"></p>
+                    <div class="mt-3 flex justify-between items-center text-xs text-gray-500">
+                        <span>💡 Tip: Write this with clean handwriting and avoid overwriting!</span>
+                        <button onclick="copyToClipboard()" class="text-blue-400 hover:underline">Copy Theme</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 8: Topper's Golden Rules Checklist -->
+        <section class="mb-10">
+            <div class="bg-gradient-to-tr from-gray-950 via-slate-900 to-gray-950 p-6 rounded-3xl border border-gray-800">
+                <h3 class="text-lg font-bold text-white mb-4 flex items-center">
+                    <svg class="w-5 h-5 text-emerald-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    🏆 HSC Theme Writing Quick Checklist
+                </h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs md:text-sm">
+                    <ul class="space-y-2">
+                        <li class="flex items-center text-gray-300">
+                            <span class="text-emerald-500 mr-2">✔</span> কবিতাটি আগে ভালোমতো বুঝতে হবে।
+                        </li>
+                        <li class="flex items-center text-gray-300">
+                            <span class="text-emerald-500 mr-2">✔</span> নিজের ভাষায় সাবলীল বাক্য ব্যবহার করো।
+                        </li>
+                        <li class="flex items-center text-gray-300">
+                            <span class="text-emerald-500 mr-2">✔</span> সাইজ ৪ থেকে ৬ লাইন রাখা আদর্শ।
+                        </li>
+                    </ul>
+                    <ul class="space-y-2">
+                        <li class="flex items-center text-gray-300">
+                            <span class="text-red-500 mr-2">✘</span> কবিতা থেকে কোনো লাইন হুবহু কপি করো না।
+                        </li>
+                        <li class="flex items-center text-gray-300">
+                            <span class="text-red-500 mr-2">✘</span> কখনোই Summary আকারে বিশাল লিখো না।
+                        </li>
+                        <li class="flex items-center text-gray-300">
+                            <span class="text-red-500 mr-2">✘</span> অতিরিক্ত অপ্রয়োজনীয় জটিলতা পরিহার করো।
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer / Signature of Rimit -->
+        <footer class="text-center mt-12 pt-8 border-t border-gray-800">
+            <p class="text-sm text-gray-500">HSC English First Paper Master Guide</p>
+            <div class="mt-4 flex justify-center items-center">
+                <span class="h-px w-8 bg-gray-800"></span>
+                <span class="mx-4 text-xs md:text-sm text-gray-400 font-light uppercase tracking-widest">
+                    Crafted meticulously as
+                </span>
+                <span class="h-px w-8 bg-gray-800"></span>
+            </div>
+            <div class="mt-3">
+                <span class="signature-font text-2xl md:text-3xl font-bold bg-gradient-to-r from-amber-400 via-yellow-200 to-amber-500 text-transparent bg-clip-text drop-shadow">
+                    Notes of Rimit
+                </span>
+            </div>
+            <p class="text-[10px] text-gray-600 mt-2">© 2026 Academic Study Materials. All rights reserved.</p>
+        </footer>
+
+    </div>
+
+    <!-- Scripting for Toggles, Printing & Generator -->
+    <script>
+        function toggleInkSaver() {
+            const body = document.getElementById('mainBody');
+            const buttonText = document.getElementById('inkSaverText');
+            const printTip = document.getElementById('printTip');
+            
+            body.classList.toggle('light-mode');
+            
+            if (body.classList.contains('light-mode')) {
+                buttonText.innerText = "Toggle Dark (Original)";
+                printTip.innerHTML = "💡 <strong>কালি সাশ্রয়ী মোড সক্রিয়:</strong> ডার্ক গ্রাফিক্স প্রিন্ট এড়াতে এই সাদা মোডেই সরাসরি প্রিন্ট করুন।";
+            } else {
+                buttonText.innerText = "Toggle Ink-Saver (Light)";
+                printTip.innerHTML = "💡 <strong>পিডিএফ প্রিন্ট টিপস:</strong> ডার্ক মোডে হুবহু প্রিন্ট করতে চাইলে প্রিন্ট ডায়ালগ বক্স ওপেন হওয়ার পর <strong>More Settings</strong> থেকে <strong>\"Background graphics\"</strong> অপশনটি চেক করুন।";
+            }
+        }
+
+        function triggerPrint() {
+            window.print();
+        }
+
+        function generateTheme() {
+            const topic = document.getElementById('topicInput').value || 'The Lamb';
+            const provide = document.getElementById('provideInput').value || 'divine creation, purity and innocence of life';
+            const without = document.getElementById('withoutInput').value || 'the little lamb, the child, and their God are deeply connected';
+            const actionDo = document.getElementById('doInput').value || 'love, appreciate, and cherish all creations of the Lord';
+
+            const formattedTopic = topic.charAt(0).toUpperCase() + topic.slice(1);
+
+            // Constructing the theme string based on the strict topper's guide
+            const theme = `The central theme of the poem is the importance of ${formattedTopic}. The poet emphasizes that ${provide}. The poem shows that ${without}. Therefore, everyone should ${actionDo} because this message inspires us to recognize divinity in all entities and makes our life successful.`;
+
+            document.getElementById('generatedThemeText').innerText = theme;
+            document.getElementById('outputArea').classList.remove('hidden');
+        }
+
+        function copyToClipboard() {
+            const textToCopy = document.getElementById('generatedThemeText').innerText;
+            const tempInput = document.createElement('textarea');
+            tempInput.value = textToCopy;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand('copy');
+            document.body.removeChild(tempInput);
+            
+            alert('Your custom theme has been copied to your clipboard!');
+        }
+    </script>
+</body>
+</html>
